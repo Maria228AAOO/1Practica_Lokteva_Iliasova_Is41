@@ -1,0 +1,23 @@
+### 1. Успешный запрос — 200  
+GET http://127.0.0.1:5051/api/notes  
+Accept: application/json  
+  
+###  
+  
+### 2. Неправильный путь — 404  
+GET http://127.0.0.1:5051/api/abrakadabra  
+Accept: application/json  
+  
+###  
+  
+### 3. Ошибка типа данных — 400  
+GET http://127.0.0.1:5051/api/notes?id=ошибка_типа_данных  
+Accept: application/json  
+  
+###  
+  
+### 4. Неправильный метод — 404  
+POST http://127.0.0.1:5051/api/notes  
+Content-Type: application/json  
+  
+{}  
